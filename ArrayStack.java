@@ -26,7 +26,7 @@ public class ArrayStack implements Stack{
 
 	public void growArray(){
 		Object[] temp = new Object[arr.length*2];
-		for(int i = 0; i < arr.length; i++){
+		for(int i = top; i < arr.length -1; i++){
 			temp[i] = arr[i];
 		}
 		arr = temp;

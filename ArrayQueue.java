@@ -16,8 +16,20 @@ public class ArrayQueue implements Queue{
 	}
 
 	public Object dequeue(){
-		Assert.not_false(head == tail);
-		return arr[head++];
+		//Assert.not_false(!empty());
+		//System.out.println(head);
+		//return arr[head++ arr.length];
+		int currentHead = head;
+		if(currentHead == arr.length -1){
+			head = 0;
+			return(arr[currentHead]);
+		}
+		else{
+			head++;
+			return(arr[currentHead]);
+		}
+		
+
 	}
 
 	public boolean empty(){
